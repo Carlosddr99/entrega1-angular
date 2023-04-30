@@ -1,0 +1,23 @@
+
+<form   (ngSubmit)="submitForm()">
+    Nombre:<input name="first" type="text" [(ngModel)]="nombre"><br/><br/>
+    Apellido:<input type="text" [(ngModel)]="apellidos" [ngModelOptions]="{standalone: true}"/><br/><br/>
+    Teléfono:<input type="number" [(ngModel)]="telefono" [ngModelOptions]="{standalone: true}"/><br/><br/>
+    Fecha Nacimiento:<input type="date" [(ngModel)]="fecha" [ngModelOptions]="{standalone: true}" /><br/><br/>
+    <input type="submit" value="Enviar Formulario"/>
+</form>
+
+<table  class="default">
+    <tr style="border:solid black ">
+        <th style="border:solid black ">Nombre</th>
+        <th style="border:solid black ">Apellido</th>
+        <th style="border:solid black ">Fecha</th>
+        <th style="border:solid black ">Telefono</th>
+    </tr>
+    <tr style="border:solid black " *ngFor="let element of users">
+        <td style="border:solid black ">{{element.nombre}}</td>
+        <td style="border:solid black ">{{element.apellidos}}</td>
+        <td style="border:solid black " >{{element.date}}</td>
+        <td style="border:solid black ">{{element.telefono}}</td>
+    </tr>
+</table>

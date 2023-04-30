@@ -1,0 +1,11 @@
+
+<div>
+    <input [(ngModel)] = "item"/>
+    <button (click) ="addItem()">Add element</button>
+</div>
+<br/>
+<br/>
+<div *ngFor="let element of list">
+    <span>{{element}}</span>
+    <button (click) = 'removeItem(element)'>Remove element</button>
+</div>
